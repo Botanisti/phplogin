@@ -1,0 +1,19 @@
+<!-- HTML input field -->
+<input type="text" id="inputField">
+
+<!-- Button to submit the input -->
+<button onclick="checkInput()">Submit</button>
+
+<!-- JavaScript function to check the input and redirect the user -->
+<script>
+  function checkInput() {
+    // Get the value of the input field
+    var input = document.getElementById("inputField").value;
+
+    // Check if the input is correct
+    if (input == "correct") {
+      // Redirect the user to a new website
+      window.location = "www.google.com";
+    }
+  }
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Randomized Links</title>
+    <style>
+        /* Use CSS to style the appearance of your website */
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Use CSS to position the links on the screen */
+        ul li {
+            position: absolute;
+        }
+    </style>
+    <script>
+        // Use JavaScript to create a function that will randomly rearrange the links on the screen
+        function randomizeLinks() {
+            // Get the list of links
+            var links = document.querySelectorAll("ul li");
+            
+            // Use the Math.random() function to generate random numbers, and then use those numbers to determine the position of the links
+            for (var i = 0; i < links.length; i++) {
+                var randomTop = Math.floor(Math.random() * 500);
+                var randomLeft = Math.floor(Math.random() * 500);
+                links[i].style.top = randomTop + "px";
+                links[i].style.left = randomLeft + "px";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Randomized Links</h1>
+    <p>Click the button below to randomize the links!</p>
+    <button onclick="randomizeLinks()">Randomize Links</button>
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+        <li><a href="#">Link 5</a></li>
+    </ul>
+</body>
+</html>
